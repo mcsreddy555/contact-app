@@ -1,0 +1,25 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "Chandra",
+      "lastName": "Sekhar",
+      "email": "mcsreddy555@gmail.com",
+      "mobile": 9848915846
+    },
+    {
+      "id": 3,
+      "firstName": "Sekhar",
+      "lastName": "Reddy",
+      "email": "chandumullangi3@gmail.com",
+      "mobile": 6305020548
+    },
+    {
+      "id": 25,
+      "firstName": "phanindra",
+      "lastName": "Reddy",
+      "email": "reddy@gmail.com",
+      "mobile": "7676767676"
+    }
+  ]
+}

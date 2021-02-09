@@ -1,0 +1,77 @@
+<div class="container">
+    <h2 style="background-color: aquamarine; padding: 5px;" class="text-center">Contact Page</h2>
+
+    <input type="text" class="form-control" name="firstName" placeholder="Enter first Name To Search" [(ngModel)]="firstName" (ngModelChange)= "Search()" ><button class="btn bnt-info"></button>
+    <div class=".table-responsive">
+        <table class="table table-responsive table-bordered table-hover">
+        <thead style="text-align: center;" class="bg-warning">
+            <tr>
+                <th>S No</th>
+                <!-- <th>Id</th> -->
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Phone No</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let contact of contacts; let i=index">
+                <td>{{i+1}}</td>
+                <!-- <td>{{contact.id}}</td> -->
+                <td>{{contact.firstName}}</td>
+                <td>{{contact.lastName}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.mobile}}</td>
+                <td>
+                    <button class="btn btn-info m-1 " (click)="viewContact(contact.id)"><i class="fa fa-info"></i> Details</button>
+                    <button class="btn btn-warning m-1" style="margin-left: 10px;" (click)="editContact(contact.id)"><i class="fa fa-edit"></i>Update</button>
+                    <button class="btn btn-danger m-1 " style="margin-left: 10px;" (click)="deleteContact(contact.id)"><i class="fa fa-trash"></i>Delete</button>
+                </td>
+            </tr>
+
+            <!-- <tr>
+                <td>firstName</td>
+                <td>lastName</td>
+                <td>email</td>
+                <td>mobile</td>
+                <td>
+                    <button class="btn btn-info m-1" routerLink="/view-contact">Details</button>
+                    <button class="btn btn-info m-1" style="margin-left: 10px;" routerLink="/edit-contact">Update</button>
+                    <button class="btn btn-danger m-1" style="margin-left: 10px;">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>firstName</td>
+                <td>lastName</td>
+                <td>email</td>
+                <td>mobile</td>
+                <td>
+                    <button class="btn btn-info m-1" routerLink="/view-contact">Details</button>
+                    <button class="btn btn-info m-1" style="margin-left: 10px;" routerLink="/edit-contact">Update</button>
+                    <button class="btn btn-danger m-1" style="margin-left: 10px;">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>firstName</td>
+                <td>lastName</td>
+                <td>email</td>
+                <td>mobile</td>
+                <td>
+                    <button class="btn btn-info m-1" routerLink="/view-contact">Details</button>
+                    <button class="btn btn-info m-1" style="margin-left: 10px;" routerLink="/edit-contact">Update</button>
+                    <button class="btn btn-danger m-1" style="margin-left: 10px;">Delete</button>
+                </td>
+            </tr> -->
+
+            
+
+
+            
+        </tbody>
+        </table>
+    </div>
+</div>
